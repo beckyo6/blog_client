@@ -14,5 +14,5 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('categories.index');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
