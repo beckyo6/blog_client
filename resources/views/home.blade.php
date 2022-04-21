@@ -179,9 +179,14 @@
                     <h2 id="about" class="text-white">À propos</h2>
                     <hr>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, saepe. Quidem maiores sunt
-                        laborum voluptas excepturi dolor asperiores
-                        nesciunt dignissimos error non porro, labore inventore libero pariatur corporis vel facilis?
+                        je suis <b>Rebecca tshikadile</b>, souvent j'utilise mon pseudo <b>becky ada</b>.
+                    </p>
+                    <p>Je suis une developpeuse web avec une éxperience dans le codage, la conception et le test des sites
+                        web.
+                    </p>
+                    <p>
+                        je maitrise les technologies du web en front et back-end avec une specialisation en
+                        conception des dashboards et la gestion des bases des données.
                     </p>
                 </div>
                 <div class="col-md-3 offset-md-2">
