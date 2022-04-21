@@ -26,7 +26,7 @@ class HomeController extends Controller
 
         $articlesderniers = Article::limit(5)->orderBy('created_at','DESC')->get();
 
-          $articledernier = Article::limit(1)->orderBy('created_at','DESC')->get();
+          $articledernier = Article::limit(1)->orderBy('created_at','DESC')->first();
 
         return view('home', compact('articles', 'categories','articlesderniers', 'articledernier'));
     }
