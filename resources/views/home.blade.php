@@ -114,7 +114,7 @@
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body">
-                                                <a href="#">
+                                                <a href="article/{{$articledernier->id}}/detail">
                                                     <h5 class="card-title fw-bold">{{ $articledernier->titre}}</h5>
                                                 </a>
                                                 <p class="card-text text-start">
