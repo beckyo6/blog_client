@@ -60,7 +60,9 @@ class ArticleController extends Controller
         ->where('articles.id', $id)
         ->first();
 
-        return view('templates.app', compact('article'));
+        $articlesderniers = Article::limit(5)->orderBy('created_at','DESC')->get();
+
+        return view('article', compact('article','articlesderniers'));
 
     }
 
