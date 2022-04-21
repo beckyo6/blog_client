@@ -137,7 +137,7 @@
                                                     <h5 class="card-title fw-bold">{{ $article->titre }}</h5>
                                                 </a>
                                                 <p class="card-text text-start">
-                                                    {{ $article->titre }}
+                                                    {{ Str::limit($article->contenu, 150) }}
                                                 </p>
                                             </div>
                                         </div>
