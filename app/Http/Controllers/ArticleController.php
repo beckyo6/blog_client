@@ -47,7 +47,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $articles = Article::select(
+        $article = Article::select(
             'articles.id',
             'articles.titre',
             'articles.image',

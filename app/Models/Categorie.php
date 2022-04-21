@@ -18,4 +18,10 @@ class Categorie extends Model
         'titre',
         'user_id'
     ];
+
+    public static function getCategorie()
+    {
+        return $categories = self::all();
+    }
+
 }
