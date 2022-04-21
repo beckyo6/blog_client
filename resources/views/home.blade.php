@@ -128,23 +128,26 @@
                                     </div>
                                 </div>
                             </div>
-                            @for ($i = 0; $i < 10; $i++)
-                                <div class="col-md-6">
-                                    <div class="card text-left mb-3">
-                                        <div class="card-body">
-                                            <a href="#">
-                                                <h5 class="card-title fw-bold">Titre de l'article</h5>
-                                            </a>
-                                            <p class="card-text text-start">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi neque
-                                                accusamus obcaecati aliquam deserunt, eos perferendis corporis impedit
-                                                nemo tempora rerum sequi, magnam facilis voluptate laborum mollitia in
-                                                repudiandae totam!
-                                            </p>
+                            @if ($articles->isNotEmpty())
+                                @foreach ($articles as $article)
+                                    <div class="col-md-6">
+                                        <div class="card text-left mb-3">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <h5 class="card-title fw-bold">{{ $article->titre }}</h5>
+                                                </a>
+                                                <p class="card-text text-start">
+                                                    {{ $article->titre }}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
+                                @endforeach
+                            @else
+                                <div>
+                                    Aucun article disponible
                                 </div>
-                            @endfor
+                            @endif
                         </div>
                     </div>
                     {{-- end liste des articles --}}
