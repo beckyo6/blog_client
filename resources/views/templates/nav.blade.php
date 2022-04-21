@@ -26,7 +26,7 @@
                     <div class="dropdown-menu">
                         @if (App\Models\Categorie::getCategorie()->isNotEmpty())
                             @foreach ($categories = App\Models\Categorie::getCategorie() as $categorie)
-                                <a class="dropdown-item" href="#">{{ $categorie->titre }}</a>
+                                <a class="dropdown-item" href="article/{{ $categorie->id }}/categorie">{{ $categorie->titre }}</a>
                             @endforeach
                         @else
                             <div>
