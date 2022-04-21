@@ -58,7 +58,7 @@
                             <div class="dropdown-menu">
                                 @if ($categories->isNotEmpty())
                                     @foreach ($categories as $categorie)
-                                        <a class="dropdown-item" href="#">{{ $categorie->titre }}</a>
+                                        <a class="dropdown-item" href="article/{{ $categorie->id }}/categorie">{{ $categorie->titre }}</a>
                                     @endforeach
                                 @else
                                     <div>
