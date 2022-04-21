@@ -45,9 +45,23 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show($id)
     {
-        //
+        $articles = Article::select(
+            'articles.id',
+            'articles.titre',
+            'articles.image',
+            'articles.contenu',
+            'articles.created_at',
+            'categories.titre as categorie',
+            'users.name'
+        )->join('users', 'articles.user_id', 'users.id')
+        ->join('categories', 'articles.category_id', 'categories.id')
+        ->where('articles.id', $id)
+        ->first();
+
+        return view('article', compact('article'));
+
     }
 
     /**
