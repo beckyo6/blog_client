@@ -14,7 +14,9 @@ class CategorieController extends Controller
      */
     public function index()
     {
-       
+        $categories = Categorie::get();
+
+        return view('home', compact('categories'));
     }
 
     /**
@@ -24,6 +26,7 @@ class CategorieController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
@@ -34,8 +37,7 @@ class CategorieController extends Controller
      */
     public function store(Request $request)
     {
-        
-        
+       //
     }
 
     /**
@@ -57,8 +59,7 @@ class CategorieController extends Controller
      */
     public function edit($id)
     {
-       
-
+        //
     }
 
     /**
@@ -81,6 +82,6 @@ class CategorieController extends Controller
      */
     public function destroy($categorie)
     {
-       
+        //
     }
 }

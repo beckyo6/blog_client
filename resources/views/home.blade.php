@@ -56,9 +56,15 @@
                                 Catégories
                             </h6>
                             <div class="dropdown-menu">
-                                @for ($i = 0; $i < 5; $i++)
-                                    <a class="dropdown-item" href="#">php</a>
-                                @endfor
+                                @if ($categories->isNotEmpty())
+                                    @foreach ($categories as $categorie)
+                                        <a class="dropdown-item" href="#">{{ $categorie->titre }}</a>
+                                    @endforeach
+                                @else
+                                    <div>
+                                        Aucune Catégorie disponible
+                                    </div>
+                                @endif
                             </div>
                         </li>
                         <li class="nav-item">
@@ -181,7 +187,8 @@
                     <p>
                         je suis <b>Rebecca tshikadile</b>, souvent j'utilise mon pseudo <b>becky ada</b>.
                     </p>
-                    <p>Je suis une developpeuse web avec une éxperience dans le codage, la conception et le test des sites
+                    <p>Je suis une developpeuse web avec une éxperience dans le codage, la conception et le test des
+                        sites
                         web.
                     </p>
                     <p>
@@ -216,33 +223,33 @@
                     </p>
 
                     <p>
-                        <ul class="social">
-                            <li class="list-enligne-item">
-                                <a href="https://github.com/beckyo6">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                            <li class="list-enligne-item">
-                                <a href="https://www.facebook.com/becky.ada.3538">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li class="list-enligne-item">
-                                <a href=" https://wa.me/243978977879">
-                                    <i class="fa fa-whatsapp"></i>
-                                </a>
-                            </li>
-                            <li class="list-enligne-item">
-                                <a href="https://www.instagram.com/beckyada6/">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="list-enligne-item">
-                                <a href="https://www.linkedin.com/in/rebecca-tshikadile-021155236">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                        </ul>
+                    <ul class="social">
+                        <li class="list-enligne-item">
+                            <a href="https://github.com/beckyo6">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-enligne-item">
+                            <a href="https://www.facebook.com/becky.ada.3538">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-enligne-item">
+                            <a href=" https://wa.me/243978977879">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="list-enligne-item">
+                            <a href="https://www.instagram.com/beckyada6/">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-enligne-item">
+                            <a href="https://www.linkedin.com/in/rebecca-tshikadile-021155236">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
                     </p>
                 </div>
             </div>
