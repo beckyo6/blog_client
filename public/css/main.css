@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* ici se trouve la customisation */
+/* font-family font-family: 'Oswald', sans-serif; */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+.img-fluid {
+    display: block;
+    width: auto;
+}
+
+
+.bg-maincolor {
+    background-color: #280000 !important;
+}
+
+.bg-maincolor .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+
+.bg-maincolor .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* header */
+
+
+/* end header */
+
+/* banner */
+.inner-banner {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+
+.inner-banner h1 {
+    text-shadow: 1px 1px 20px;
+    text-transform: uppercase;
+
+}
+
+.img-fluid {
+    position: relative;
+}
+
+
+
+/* end banner */
+
+/* articles */
+
+a:hover {
+    color: #ac3931;
+}
+
+
+/* end articles*/
+
+/* footer */
+.footer {
+    background-color: #280000;
+    color: white;
+}
+
+.footer h2 {
+    font-weight: bold;
+}
+
+
+/* end footer */
