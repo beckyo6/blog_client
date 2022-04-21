@@ -130,7 +130,7 @@
                                     <div class="col-md-6">
                                         <div class="card text-left mb-3">
                                             <div class="card-body">
-                                                <a href="#">
+                                                <a href="article/{{$article->id}}/detail">
                                                     <h5 class="card-title fw-bold">{{ $article->titre }}</h5>
                                                 </a>
                                                 <p class="card-text text-start">
