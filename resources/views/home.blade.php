@@ -115,13 +115,10 @@
                                         <div class="col-md-8">
                                             <div class="card-body">
                                                 <a href="#">
-                                                    <h5 class="card-title fw-bold">Titre de l'article</h5>
+                                                    <h5 class="card-title fw-bold">{{ $articledernier->titre}}</h5>
                                                 </a>
                                                 <p class="card-text text-start">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
-                                                    fugiat nesciunt eveniet dolore quibusdam quae dolorum. Culpa
-                                                    officiis ea voluptas, delectus necessitatibus dicta asperiores,
-                                                    nostrum vero animi sint nihil expedita?
+                                                    {{ Str::limit($articledernier->contenu, 150) }}
                                                 </p>
                                             </div>
                                         </div>
