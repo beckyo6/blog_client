@@ -15,7 +15,19 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::select(
+            'articles.id',
+            'articles.titre',
+            'articles.image',
+            'articles.contenu',
+            'articles.created_at',
+            'categories.titre as categorie',
+            'users.name'
+        )->join('users', 'articles.user_id', 'users.id')
+        ->join('categories', 'articles.category_id', 'categories.id')
+        ->get();
+
+        return view('home', compact('articles'));
     }
 
     /**
