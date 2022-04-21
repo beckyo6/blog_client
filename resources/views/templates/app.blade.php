@@ -17,7 +17,7 @@
 </main>
 
 {{-- footer --}}
-<footer class="container-fluid footer">
+<footer class="container-fluid footer fixed-bottom">
     <div class="container">
         <div class="row py-3">
             @yield('content')

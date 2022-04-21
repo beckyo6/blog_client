@@ -60,7 +60,7 @@ class ArticleController extends Controller
         ->where('articles.id', $id)
         ->first();
 
-        return view('article', compact('article'));
+        return view('templates.app', compact('article'));
 
     }
 

@@ -24,8 +24,8 @@
                         Catégories
                     </h6>
                     <div class="dropdown-menu">
-                        @if ($categories->isNotEmpty())
-                            @foreach ($categories as $categorie)
+                        @if (App\Models\Categorie::getCategorie()->isNotEmpty())
+                            @foreach ($categories = App\Models\Categorie::getCategorie() as $categorie)
                                 <a class="dropdown-item" href="#">{{ $categorie->titre }}</a>
                             @endforeach
                         @else

@@ -13,14 +13,14 @@
     {{-- end font --}}
 
     {{-- css --}}
-    <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/main.css')}}">
     {{-- end css --}}
 
     {{-- javascripts --}}
-    <script href="js/jquery-3.6.0.min.js"> </script>
-    <script href="js/bootstrap.min.js"> </script>
+    <script href="{{ asset('js/jquery-3.6.0.min.js')}}"> </script>
+    <script href="{{ asset('js/bootstrap.min.js')}}"> </script>
     <script src="https://kit.fontawesome.com/14273d579a.js" crossorigin="anonymous"></script>
     {{-- javascripts --}}
 
