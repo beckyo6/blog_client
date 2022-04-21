@@ -82,7 +82,7 @@
 
     {{-- main --}}
     <main>
-        <section class="">
+        <section>
             <div class="container-fluid">
                 {{-- bannière --}}
                 <div class="row">
@@ -156,21 +156,26 @@
                     <div class="col-md-4 offset-md-1">
                         <h1>5 derniers articles</h1>
                         <hr>
-                        @for ($i = 0; $i < 5; $i++)
-                            <div class="card text-left mb-3" style="width: 18rem;">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <h5 class="card-title fw-bold">Titre de l'article {{ $i }}</h5>
-                                    </a>
-                                    <p class="card-text text-start">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia ab obcaecati, nam
-                                        repellendus illum optio vel magni, explicabo expedita tempore alias. Quae,
-                                        molestiae
-                                        optio iure saepe aliquid quisquam repellat vitae.
-                                    </p>
+                        @if ($articlesderniers->isNotEmpty())
+                                @foreach ($articlesderniers as $articlesdernier)
+                                    <div class="col-md-6">
+                                        <div class="card text-left mb-3">
+                                            <div class="card-body">
+                                                <a href="#">
+                                                    <h5 class="card-title fw-bold">{{ $articlesdernier->titre }}</h5>
+                                                </a>
+                                                <p class="card-text text-start">
+                                                    {{ Str::limit($articlesdernier->contenu, 150) }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @else
+                                <div>
+                                    Aucun article disponible
                                 </div>
-                            </div>
-                        @endfor
+                            @endif
                     </div>
                     {{-- end 5 derniers articles --}}
                 </div>

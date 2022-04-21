@@ -24,7 +24,9 @@ class HomeController extends Controller
         ->join('categories', 'articles.category_id', 'categories.id')
         ->get();
 
-        return view('home', compact('articles', 'categories'));
+        $articlesderniers = Article::limit(5)->orderBy('created_at','DESC')->get();
+
+        return view('home', compact('articles', 'categories','articlesderniers'));
     }
 
 }
