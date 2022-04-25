@@ -137,7 +137,7 @@
                                                     {{ Str::limit($article->contenu, 150) }} <br>
                                                     <br>
                                                    Auteur: <span class="fw-bold">{{ $article->name }}</span>
-                                                   <span class=" offset-md-4"><i class="fa fa-comment"></i></span>
+                                                   <span class=" offset-md-4"><i class="fa fa-comment"> {{ App\Models\Commentaire::CountByarticle($article->id) }}</i></span>
                                                 </p>
                                             </div>
                                         </div>
@@ -168,7 +168,7 @@
                                                     {{ Str::limit($articlesdernier->contenu, 150) }} <br> <br>
                                                     
                                                     Auteur: <span class="fw-bold">{{ $article->name }}</span>
-                                                   <span class=" offset-md-4"><i class="fa fa-comment"></i></span>
+                                                   <span class=" offset-md-4"><i class="fa fa-comment"> {{ App\Models\Commentaire::CountByarticle($articlesdernier->id) }}</i></span>
                                                 </p>
                                             </div>
                                         </div>
