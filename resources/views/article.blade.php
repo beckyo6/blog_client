@@ -32,7 +32,30 @@
             <div class="form-group col-lg-12">
                 <button class="btn btn-maincolor" type="submit">Envoyer</button>
             </div>
-        </form>
+        </form> <br>
+
+        <h3 class="h4 mb-4 d-flex align-items-center">
+            <span class="fw-bold">Commentaires</span>
+            <span class="text-small ml-3 text-gray">
+                - {{ App\Models\Commentaire::CountByarticle($article->id) }} commentaires
+            </span>
+        </h3>
+        <ul>
+            <li>
+                <div class="d-flex mb-4">
+                    <div class="pr-2 flex-grow-1" style="width: 75px; min-width: 75px;"><img
+                            class="rounded-circle shadow-sm img-fluid img-thumbnail" src="img/person-1.jpg" alt=""></div>
+                    <div class="pl-2">
+                        <p class="small mb-0 text-primary">15 Aug 2019</p>
+                        <h5>Jimmy Roy</h5>
+                        <p class="text-muted text-small mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            At.
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
     {{-- 5 derniers articles --}}

@@ -55,7 +55,9 @@ a {
     border-color: #1a1e21;
 }
 
-
+.comments > li > ul {
+    margin-left: 70px;
+  }
 /* header */
 
 
