@@ -8,12 +8,14 @@
         </div>
         <br> <br>
         <h5 class="fw-bold">Laissez un commentaire</h5> <br>
-        <form class="mb-5" action="#">
+        <form class="mb-5" action="{{ route('commentaire.post') }}" method="POST">
+            @csrf
+            <input type="hidden" name="article_id" value="{{ $article->id }}">            
             <div class="mb-3">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="inserer votre nom">
+                <input type="text" class="form-control" name="nom" id="exampleFormControlInput1" placeholder="inserer votre nom">
             </div>
             <div class="mb-3">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                <textarea class="form-control" name="commentaire" id="exampleFormControlTextarea1" rows="4"
                     placeholder="inserer votre commentaire"></textarea>
             </div>
             <div class="form-group col-lg-12">
