@@ -20,4 +20,11 @@ class Commentaire extends Model
         'article_id'
 
     ];
+
+    public static function CountByarticle($article)
+    {
+        return self::join('articles', 'commentaires.article_id', 'articles.id')
+        ->where('commentaires.article_id', $article)
+        ->count();
+    }
 }
