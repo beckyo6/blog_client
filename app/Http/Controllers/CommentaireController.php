@@ -35,7 +35,18 @@ class CommentaireController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'nom' => 'required',
+            'commentaire' => 'required',
+            'article_id' => 'required'
+        ]);
+
+        $comments = Commentaire::create($validated);
+
+        if ($comments) {
+            return redirect()->route('article.index')->withSuccess('votre commentaire à été publié avec succès');
+        }
+        redirect()->back()->withInput()->withError('erreur à la publication du commentaire ');
     }
 
     /**
