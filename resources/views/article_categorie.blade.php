@@ -16,7 +16,13 @@
                                             <h5 class="card-title fw-bold">{{ $article->titre }}</h5>
                                         </a>
                                         <p class="card-text text-start">
-                                            {{ Str::limit($article->contenu, 150) }}
+                                            {{ Str::limit($article->contenu, 150) }} <br> <br>
+                                            Auteur: <span class="fw-bold">{{ $article->name }}</span>
+                                            <span class=" offset-md-4">
+                                                <i class="fa fa-comment">
+                                                    {{ App\Models\Commentaire::CountByarticle($article->id) }}
+                                                </i>
+                                            </span>
                                         </p>
                                     </div>
                                 </div>
@@ -42,7 +48,14 @@
                                         <h5 class="card-title fw-bold">{{ $articlesdernier->titre }}</h5>
                                     </a>
                                     <p class="card-text text-start">
-                                        {{ Str::limit($articlesdernier->contenu, 150) }}
+                                        {{ Str::limit($articlesdernier->contenu, 150) }} <br> <br>
+
+                                        Auteur: <span class="fw-bold">{{ $article->name }}</span>
+                                        <span class=" offset-md-4">
+                                            <i class="fa fa-comment">
+                                                {{ App\Models\Commentaire::CountByarticle($article->id) }}
+                                            </i>
+                                        </span>
                                     </p>
                                 </div>
                             </div>
