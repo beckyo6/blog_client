@@ -48,7 +48,8 @@
                     <div class="pl-2">
                         <p class="small mb-0 text-primary">15 Aug 2019</p>
                         <h5>Jimmy Roy</h5>
-                        <p class="text-muted text-small mb-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        <p class="text-muted text-small mb-2">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                             diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                             At.
                         </p>

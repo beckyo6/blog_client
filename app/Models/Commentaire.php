@@ -24,7 +24,18 @@ class Commentaire extends Model
     public static function CountByarticle($article)
     {
         return self::join('articles', 'commentaires.article_id', 'articles.id')
-        ->where('commentaires.article_id', $article)
-        ->count();
+            ->where('commentaires.article_id', $article)
+            ->count();
+    }
+
+    public static function getByarticle($article)
+    {
+        return self::select(
+            'commentaires.id',
+            'commentaires.nom',
+            'commentaires.commentaire',
+        )->join('articles', 'commentaires.article_id', 'articles.id')
+            ->where('commentaires.article_id', $article)
+            ->get();
     }
 }
