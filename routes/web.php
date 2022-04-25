@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CommentaireController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('article/{id}/detail', [ArticleController::class, 'show'])->name('article.show');
 
 Route::get('article/{id}/categorie', [ArticleController::class, 'index'])->name('article.index');
+
+Route::post('commentaire', [CommentaireController::class, 'store'])->name('commentaire.post');
+
