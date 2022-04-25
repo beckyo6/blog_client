@@ -13,9 +13,11 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-       //
+       $articles = Article::getBycategory($id);
+
+       return view('article_categorie', compact('articles'));
     }
 
     /**
