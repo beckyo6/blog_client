@@ -19,3 +19,4 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('article/{id}/detail', [ArticleController::class, 'show'])->name('article.show');
 
+Route::get('article/{id}/categorie', [ArticleController::class, 'index'])->name('article.index');

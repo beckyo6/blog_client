@@ -21,7 +21,7 @@
     {{-- javascripts --}}
     <script href="{{ asset('js/jquery-3.6.0.min.js')}}"> </script>
     <script href="{{ asset('js/bootstrap.min.js')}}"> </script>
-    <script src="https://kit.fontawesome.com/14273d579a.js" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/kitFontawesome.js')}}" crossorigin="anonymous"></script>
     {{-- javascripts --}}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
