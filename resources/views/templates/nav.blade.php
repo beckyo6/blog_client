@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" href="#">Accueil</a>
+                    <a class="nav-link active text-white" href="/">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#post">Articles</a>
