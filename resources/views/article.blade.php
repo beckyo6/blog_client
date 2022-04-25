@@ -8,11 +8,22 @@
         </div>
         <br> <br>
         <h5 class="fw-bold">Laissez un commentaire</h5> <br>
+        @if (session('success'))
+            <div class="alert alert-success text-center msg" id="error">
+                <strong>{{ session('success') }}</strong>
+            </div>
+        @endif
+        @if (session('alert'))
+            <div class="alert alert-success text-center msg" id="error">
+                <strong>{{ session('alert') }}</strong>
+            </div>
+        @endif
         <form class="mb-5" action="{{ route('commentaire.post') }}" method="POST">
             @csrf
-            <input type="hidden" name="article_id" value="{{ $article->id }}">            
+            <input type="hidden" name="article_id" value="{{ $article->id }}">
             <div class="mb-3">
-                <input type="text" class="form-control" name="nom" id="exampleFormControlInput1" placeholder="inserer votre nom">
+                <input type="text" class="form-control" name="nom" id="exampleFormControlInput1"
+                    placeholder="inserer votre nom">
             </div>
             <div class="mb-3">
                 <textarea class="form-control" name="commentaire" id="exampleFormControlTextarea1" rows="4"

@@ -44,7 +44,7 @@ class CommentaireController extends Controller
         $comments = Commentaire::create($validated);
 
         if ($comments) {
-            return redirect()->route('article.index')->withSuccess('votre commentaire à été publié avec succès');
+            return redirect()->route('article.show', ['id' => $request->article_id])->withSuccess('votre commentaire à été publié avec succès');
         }
         redirect()->back()->withInput()->withError('erreur à la publication du commentaire ');
     }
