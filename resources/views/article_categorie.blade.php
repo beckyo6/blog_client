@@ -7,7 +7,7 @@
                 <h1 id="post">Articles</h1>
                 <hr>
                 <div class="row py-1">
-                    {{--<div class="col-md-12">
+                    {{-- <div class="col-md-12">
                         <div class="card mb-3" style="height: 9.3em">
                             <div class="row g-0">
                                 <div class="col-md-4">
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>--}}
+                    </div> --}}
                     @if ($articles->isNotEmpty())
                         @foreach ($articles as $article)
                             <div class="col-md-6">
@@ -47,6 +47,31 @@
                         </div>
                     @endif
                 </div>
+            </div>
+
+            <div class="col-md-4 offset-md-1 py-5">
+                <h1>5 derniers articles</h1>
+                <hr>
+                @if ($articlesderniers->isNotEmpty())
+                    @foreach ($articlesderniers as $articlesdernier)
+                        <div class="col-md-6">
+                            <div class="card text-left mb-3">
+                                <div class="card-body">
+                                    <a href="article/{{ $articlesdernier->id }}/detail">
+                                        <h5 class="card-title fw-bold">{{ $articlesdernier->titre }}</h5>
+                                    </a>
+                                    <p class="card-text text-start">
+                                        {{ Str::limit($articlesdernier->contenu, 150) }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    <div>
+                        Aucun article disponible
+                    </div>
+                @endif
             </div>
         </div>
     @endsection

@@ -45,7 +45,7 @@ class Article extends Model
     public static function lastBycategory($category)
     {
         return self::limit(5)->orderBy('created_at','DESC')
-        ->where('categories.id', $category)
+        ->where('articles.category_id', $category)
         ->get();
     }
 

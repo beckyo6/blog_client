@@ -17,7 +17,9 @@ class ArticleController extends Controller
     {
        $articles = Article::getBycategory($id);
 
-       return view('article_categorie', compact('articles'));
+       $articlesderniers = Article::lastBycategory($id);
+
+       return view('article_categorie', compact('articles', 'articlesderniers'));
     }
 
     /**
