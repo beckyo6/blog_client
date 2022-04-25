@@ -13,15 +13,15 @@
     {{-- end font --}}
 
     {{-- css --}}
-    <link rel="stylesheet" href="{{ asset('css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     {{-- end css --}}
 
     {{-- javascripts --}}
-    <script href="{{ asset('js/jquery-3.6.0.min.js')}}"> </script>
-    <script href="{{ asset('js/bootstrap.min.js')}}"> </script>
-    <script src="{{ asset('js/kitFontawesome.js')}}" crossorigin="anonymous"></script>
+    <script href="{{ asset('js/jquery-3.6.0.min.js') }}"> </script>
+    <script href="{{ asset('js/bootstrap.min.js') }}"> </script>
+    <script src="{{ asset('js/kitFontawesome.js') }}" crossorigin="anonymous"></script>
     {{-- javascripts --}}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,8 @@
                             <div class="dropdown-menu">
                                 @if ($categories->isNotEmpty())
                                     @foreach ($categories as $categorie)
-                                        <a class="dropdown-item" href="article/{{ $categorie->id }}/categorie">{{ $categorie->titre }}</a>
+                                        <a class="dropdown-item"
+                                            href="article/{{ $categorie->id }}/categorie">{{ $categorie->titre }}</a>
                                     @endforeach
                                 @else
                                     <div>
@@ -114,8 +115,8 @@
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body">
-                                                <a href="article/{{$articledernier->id}}/detail">
-                                                    <h5 class="card-title fw-bold">{{ $articledernier->titre}}</h5>
+                                                <a href="article/{{ $articledernier->id }}/detail">
+                                                    <h5 class="card-title fw-bold">{{ $articledernier->titre }}</h5>
                                                 </a>
                                                 <p class="card-text text-start">
                                                     {{ Str::limit($articledernier->contenu, 150) }}
@@ -130,14 +131,15 @@
                                     <div class="col-md-6">
                                         <div class="card text-left mb-3">
                                             <div class="card-body">
-                                                <a href="article/{{$article->id}}/detail">
+                                                <a href="article/{{ $article->id }}/detail">
                                                     <h5 class="card-title fw-bold">{{ $article->titre }}</h5>
                                                 </a>
                                                 <p class="card-text text-start">
                                                     {{ Str::limit($article->contenu, 150) }} <br>
                                                     <br>
-                                                   Auteur: <span class="fw-bold">{{ $article->name }}</span>
-                                                   <span class=" offset-md-4"><i class="fa fa-comment"> {{ App\Models\Commentaire::CountByarticle($article->id) }}</i></span>
+                                                    Auteur: <span class="fw-bold">{{ $article->name }}</span>
+                                                    <span class=" offset-md-4"><i class="fa fa-comment">
+                                                            {{ App\Models\Commentaire::CountByarticle($article->id) }}</i></span>
                                                 </p>
                                             </div>
                                         </div>
@@ -157,28 +159,29 @@
                         <h1>5 derniers articles</h1>
                         <hr>
                         @if ($articlesderniers->isNotEmpty())
-                                @foreach ($articlesderniers as $articlesdernier)
-                                    <div class="col-md-6">
-                                        <div class="card text-left mb-3">
-                                            <div class="card-body">
-                                                <a href="article/{{$articlesdernier->id}}/detail">
-                                                    <h5 class="card-title fw-bold">{{ $articlesdernier->titre }}</h5>
-                                                </a>
-                                                <p class="card-text text-start">
-                                                    {{ Str::limit($articlesdernier->contenu, 150) }} <br> <br>
-                                                    
-                                                    Auteur: <span class="fw-bold">{{ $article->name }}</span>
-                                                   <span class=" offset-md-4"><i class="fa fa-comment"> {{ App\Models\Commentaire::CountByarticle($articlesdernier->id) }}</i></span>
-                                                </p>
-                                            </div>
+                            @foreach ($articlesderniers as $articlesdernier)
+                                <div class="col-md-6">
+                                    <div class="card text-left mb-3">
+                                        <div class="card-body">
+                                            <a href="article/{{ $articlesdernier->id }}/detail">
+                                                <h5 class="card-title fw-bold">{{ $articlesdernier->titre }}</h5>
+                                            </a>
+                                            <p class="card-text text-start">
+                                                {{ Str::limit($articlesdernier->contenu, 150) }} <br> <br>
+
+                                                Auteur: <span class="fw-bold">{{ $article->name }}</span>
+                                                <span class=" offset-md-4"><i class="fa fa-comment">
+                                                        {{ App\Models\Commentaire::CountByarticle($articlesdernier->id) }}</i></span>
+                                            </p>
                                         </div>
                                     </div>
-                                @endforeach
-                            @else
-                                <div>
-                                    Aucun article disponible
                                 </div>
-                            @endif
+                            @endforeach
+                        @else
+                            <div>
+                                Aucun article disponible
+                            </div>
+                        @endif
                     </div>
                     {{-- end 5 derniers articles --}}
                 </div>

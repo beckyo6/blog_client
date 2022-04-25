@@ -34,7 +34,8 @@ class Commentaire extends Model
             'commentaires.id',
             'commentaires.nom',
             'commentaires.commentaire',
-        )->join('articles', 'commentaires.article_id', 'articles.id')
+            'commentaires.created_at',
+            )->join('articles', 'commentaires.article_id', 'articles.id')
             ->where('commentaires.article_id', $article)
             ->get();
     }

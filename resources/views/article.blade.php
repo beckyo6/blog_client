@@ -40,22 +40,29 @@
                 - {{ App\Models\Commentaire::CountByarticle($article->id) }} commentaires
             </span>
         </h3>
-        <ul>
-            <li>
-                <div class="d-flex mb-4">
-                    <div class="pr-2 flex-grow-1" style="width: 75px; min-width: 75px;"><img
-                            class="rounded-circle shadow-sm img-fluid img-thumbnail" src="img/person-1.jpg" alt=""></div>
-                    <div class="pl-2">
-                        <p class="small mb-0 text-primary">15 Aug 2019</p>
-                        <h5>Jimmy Roy</h5>
-                        <p class="text-muted text-small mb-2">
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            At.
-                        </p>
-                    </div>
+        <ul class="list-unstyled">
+            @if (App\Models\Commentaire::getByarticle($article->id)->isNotEmpty())
+                @foreach (App\Models\Commentaire::getByarticle($article->id) as $commentaire)
+                    <li>
+                        <div class="d-flex mb-4">
+                            {{--<div class="pr-2 flex-grow-1" style="width: 75px; min-width: 75px;"><img
+                                    class="rounded-circle shadow-sm img-fluid img-thumbnail" src="img/person-1.jpg" alt="">
+                            </div>--}}
+                            <div class="pl-2">
+                                <p class="small mb-0 text-primary">{{ $commentaire->created_at }}</p>
+                                <h5>{{ $commentaire->nom }}</h5>
+                                <p class="text-muted text-small mb-2">
+                                    {{ $commentaire->commentaire }}
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                @endforeach
+            @else
+                <div>
+                    Aucun commentaire
                 </div>
-            </li>
+            @endif
         </ul>
     </div>
 
