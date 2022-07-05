@@ -37,17 +37,17 @@
         <h3 class="h4 mb-4 d-flex align-items-center">
             <span class="fw-bold">Commentaires</span>
             <span class="text-small ml-3 text-gray">
-                - {{ App\Models\Commentaire::CountByarticle($article->id) }} commentaires
+                - {{ $article->commentaires->count() }} commentaires
             </span>
         </h3>
         <ul class="list-unstyled">
-            @if (App\Models\Commentaire::getByarticle($article->id)->isNotEmpty())
-                @foreach (App\Models\Commentaire::getByarticle($article->id) as $commentaire)
+            @if ($article->commentaires->isNotEmpty())
+                @foreach ($article->commentaires as $commentaire)
                     <li>
                         <div class="d-flex mb-4">
-                            {{--<div class="pr-2 flex-grow-1" style="width: 75px; min-width: 75px;"><img
-                                    class="rounded-circle shadow-sm img-fluid img-thumbnail" src="img/person-1.jpg" alt="">
-                            </div>--}}
+                            {{-- <div class="pr-2 flex-grow-1" style="width: 75px;">
+                                <img class="rounded-circle shadow-sm img-fluid img-thumbnail" src="{{ asset('img/image1.jpeg') }}" alt="">
+                            </div> --}}
                             <div class="pl-2">
                                 <p class="small mb-0 text-primary">{{ $commentaire->created_at }}</p>
                                 <h5>{{ $commentaire->nom }}</h5>
@@ -68,28 +68,7 @@
 
     {{-- 5 derniers articles --}}
     <div class="col-md-4 py-5 offset-md-1">
-        <h1>5 derniers articles</h1>
-        <hr>
-        @if ($articlesderniers->isNotEmpty())
-            @foreach ($articlesderniers as $articlesdernier)
-                <div class="col-md-6">
-                    <div class="card text-left mb-3">
-                        <div class="card-body">
-                            <a href="article/{{ $articlesdernier->id }}/detail">
-                                <h5 class="card-title fw-bold">{{ $articlesdernier->titre }}</h5>
-                            </a>
-                            <p class="card-text text-start">
-                                {{ Str::limit($articlesdernier->contenu, 150) }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        @else
-            <div>
-                Aucun article disponible
-            </div>
-        @endif
+        @include('parts.aside')
     </div>
     {{-- end 5 derniers articles --}}
 @endsection

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-maincolor py-2 fixed-top">
     <div class="container">
-        <a href="#" class="navbar-brand text-uppercase fw-bold ">
+        <a href="/" class="navbar-brand text-uppercase fw-bold ">
             <span class="bg-gradient p-1 rounded-3 text-light">Becky Ada</span>
         </a>
         <div class="offset-md-7">
@@ -24,9 +24,9 @@
                         Catégories
                     </h6>
                     <div class="dropdown-menu">
-                        @if (App\Models\Categorie::getCategorie()->isNotEmpty())
-                            @foreach ($categories = App\Models\Categorie::getCategorie() as $categorie)
-                                <a class="dropdown-item" href="article/{{ $categorie->id }}/categorie">{{ $categorie->titre }}</a>
+                        @if (App\Models\Categorie::all()->isNotEmpty())
+                            @foreach ($categories = App\Models\Categorie::all() as $categorie)
+                                <a class="dropdown-item" href="{{ route('categorie.index', $categorie->id) }}">{{ $categorie->titre }}</a>
                             @endforeach
                         @else
                             <div>

@@ -18,9 +18,7 @@ use App\Http\Controllers\CommentaireController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('article/{id}/detail', [ArticleController::class, 'show'])->name('article.show');
-
-Route::get('article/{id}/categorie', [ArticleController::class, 'index'])->name('article.index');
-
+Route::get('article/{id}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('categorie/{id}', [ArticleController::class, 'index'])->name('categorie.index');
 Route::post('commentaire', [CommentaireController::class, 'store'])->name('commentaire.post');
 

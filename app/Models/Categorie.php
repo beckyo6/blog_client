@@ -19,9 +19,16 @@ class Categorie extends Model
         'user_id'
     ];
 
-    public static function getCategorie()
+    public function user()
     {
-        return $categories = self::all();
+        return $this->belongsTo(User::class);
     }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
+
+    
 
 }

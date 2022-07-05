@@ -15,11 +15,8 @@ class ArticleController extends Controller
      */
     public function index($id)
     {
-       $articles = Article::getBycategory($id);
-
-       $articlesderniers = Article::lastBycategory($id);
-
-       return view('article_categorie', compact('articles', 'articlesderniers'));
+        $articles = Article::getBycategory($id);
+        return view('article_categorie', compact('articles', 'id'));
     }
 
     /**
@@ -29,7 +26,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-       //
+        //
     }
 
     /**
@@ -51,23 +48,8 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $article = Article::select(
-            'articles.id',
-            'articles.titre',
-            'articles.image',
-            'articles.contenu',
-            'articles.created_at',
-            'categories.titre as categorie',
-            'users.name'
-        )->join('users', 'articles.user_id', 'users.id')
-        ->join('categories', 'articles.category_id', 'categories.id')
-        ->where('articles.id', $id)
-        ->first();
-
-        $articlesderniers = Article::limit(5)->orderBy('created_at','DESC')->get();
-
-        return view('article', compact('article','articlesderniers'));
-
+        $article = Article::find($id);
+        return view('article', compact('article'));
     }
 
     /**

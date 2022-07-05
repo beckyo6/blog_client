@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Commentaire extends Model
 {
@@ -21,22 +22,21 @@ class Commentaire extends Model
 
     ];
 
-    public static function CountByarticle($article)
+    public function article()
     {
-        return self::join('articles', 'commentaires.article_id', 'articles.id')
-            ->where('commentaires.article_id', $article)
-            ->count();
+        return $this->belongsTo(Article::class);
     }
 
-    public static function getByarticle($article)
+    public function user()
     {
-        return self::select(
-            'commentaires.id',
-            'commentaires.nom',
-            'commentaires.commentaire',
-            'commentaires.created_at',
-            )->join('articles', 'commentaires.article_id', 'articles.id')
-            ->where('commentaires.article_id', $article)
-            ->get();
+        return $this->belongsTo(User::class);
     }
+
+    public function getCreatedAtAttribute($value)
+    {
+        Carbon::setLocale('fr');
+        return Carbon::parse($value)->diffForHumans();
+    }
+
+
 }

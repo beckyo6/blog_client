@@ -23,30 +23,22 @@ class Article extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id' ,'id');
     }
 
-    public static function getBycategory($category)
+    public function category()
     {
-        return self::select(
-            'articles.id',
-            'articles.titre',
-            'articles.image',
-            'articles.contenu',
-            'articles.created_at',
-            'categories.titre as categorie',
-            'users.name'
-        )->join('users', 'articles.user_id', 'users.id')
-        ->join('categories', 'articles.category_id', 'categories.id')
-        ->where('categories.id', $category)
-        ->get();
+        return $this->belongsTo(Category::class);
     }
 
-    public static function lastBycategory($category)
+    public function commentaires()
     {
-        return self::limit(5)->orderBy('created_at','DESC')
-        ->where('articles.category_id', $category)
-        ->get();
+        return $this->hasMany(Commentaire::class);
     }
 
+    public static function latest($limit)
+    {
+        return self::limit($limit)->orderBy('created_at', 'DESC')
+            ->get();
+    }
 }
