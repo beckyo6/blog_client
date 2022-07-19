@@ -1,9 +1,12 @@
-<footer class="container-fluid footer">
+<footer class="container-fluid">
     <div class="container">
+        <hr>
         <div class="row py-3">
             <div class="col-md-5">
-                <h2 id="about" class="text-white">À propos</h2>
-                <hr>
+                <h2 id="about" class="text-dark mb-5">
+                    À propos de moi <hr>
+                </h2>
+                
                 <p>
                     je suis <b>Rebecca tshikadile</b>, souvent j'utilise mon pseudo <b>becky ada</b>.
                 </p>
@@ -17,60 +20,33 @@
                 </p>
             </div>
             <div class="col-md-3 offset-md-2">
-                <h2 id="contact" class="text-white">Me contacter</h2>
-                <hr>
-                <p class="list-vertical-item">
-                    <i class="fa fa-location-arrow"></i>
-                    <span> <b> Localisation </b>:
-                        Lubumbashi, DRC
-                    </span>
-                </p>
-                <p class="list-vertical-item">
-                    <i class="fa fa-envelope"></i>
-                    <span> <b> Email </b>:
-                        <a href="mailto:rebtshikadila@gmail.com" class="text-white">
-                            rebtshikadila@gmail.com
-                        </a>
-                    </span>
-                </p>
-                <p class="list-vertical-item">
-                    <i class="fa fa-link"></i>
-                    <span> <b>Site Web </b>:
-                        <a href="https://www.beckyada.com" class="text-white">
-                            beckyada.com
-                        </a>
-                    </span></li>
-                </p>
-
-                <p>
+                <h2 id="contact" class="text-dark mb-5">
+                    Me contacter <hr>
+                </h2>
+                {{-- list of social network logo --}}
                 <ul class="social">
                     <li class="list-enligne-item">
-                        <a href="https://github.com/beckyo6">
+                        <a href="https://github.com/beckyo6" target="_blank">
                             <i class="fa fa-github"></i>
                         </a>
                     </li>
                     <li class="list-enligne-item">
-                        <a href="https://www.facebook.com/becky.ada.3538">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="list-enligne-item">
-                        <a href=" https://wa.me/243978977879">
+                        <a href=" https://wa.me/243907231708" target="_blank">
                             <i class="fa fa-whatsapp"></i>
                         </a>
                     </li>
                     <li class="list-enligne-item">
-                        <a href="https://www.instagram.com/beckyada6/">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="list-enligne-item">
-                        <a href="https://www.linkedin.com/in/rebecca-tshikadile-021155236">
+                        <a href="https://www.linkedin.com/in/rebecca-tshikadile-021155236" target="_blank">
                             <i class="fa fa-linkedin"></i>
                         </a>
                     </li>
+
+                    <li class="list-enligne-item">
+                        <a href="mailto:rebtshikadila@beckyada.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </li>
                 </ul>
-                </p>
             </div>
         </div>
         <div class="row offset-9">

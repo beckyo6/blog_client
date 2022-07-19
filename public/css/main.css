@@ -118,7 +118,7 @@ a:hover {
 }
 
 .social .list-enligne-item a {
-    background: none;
+    background: #344966;
     width: 36px;
     height: 36px;
     display: inline-block;
@@ -136,10 +136,14 @@ a:hover {
 
 .social .list-enligne-item a:hover {
 
-    background: #344966;
+    background: #00040a;
     text-decoration: none;
     -webkit-animation: fillColour 0.0s forwards ease-in-out;
     animation: fillColour 0.0s forwards ease-in-out;
+}
+
+.card-img-top {
+    border-radius: 15px;
 }
 
 /* end footer */

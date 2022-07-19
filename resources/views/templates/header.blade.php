@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mon blog</title>
+    <title>Apprenez à développer vos applications avec Laravel - Becky's blog</title>
 
     {{-- font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">

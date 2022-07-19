@@ -2,7 +2,7 @@
 <hr>
 @if (App\Models\Article::latest(5)->isNotEmpty())
     @foreach (App\Models\Article::latest(5) as $article)
-        <div class="col-md-6">
+        <div class="col-md-12">
             @include('parts.article')
         </div>
     @endforeach

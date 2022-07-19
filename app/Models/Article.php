@@ -41,4 +41,9 @@ class Article extends Model
         return self::limit($limit)->orderBy('created_at', 'DESC')
             ->get();
     }
+
+    public function getCreatedAtAttribute($value)
+    {
+        return \Carbon\Carbon::parse($value)->diffForHumans();
+    }
 }

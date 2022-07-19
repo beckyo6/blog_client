@@ -1,24 +1,10 @@
-<div class="card text-left mb-3">
-    <div class="row g-0">
-        <div class="col-md-12">
-            <img src="{{ asset('img/ban-modified.jpeg') }}" class="img-fluid rounded-start" alt="{{ $article->titre }}">
-        </div>
-        <div class="col-md-12">
-            <div class="card-body">
-                <a href="{{ route('article.show', $article->id) }}">
-                    <h5 class="card-title fw-bold">{{ $article->titre }}</h5>
-                </a>
-                <p class="card-text text-start">
-                    {!! Str::limit($article->contenu, 150) !!} <br> <br>
-
-                    Auteur: <span class="fw-bold">{{ $article->user->name }}</span>
-                    <span class=" offset-md-4">
-                        <i class="fa fa-comment">
-                            {{ $article->commentaires->count() }}
-                        </i>
-                    </span>
-                </p>
-            </div>
-        </div>
+<a class="text-dark" href="{{ route('article.show', $article->id) }}">
+    <div class="">
+        <img src="{{ asset('img/ghost-docker.webp') }}" class="card-img-top"
+            alt="{{ $article->titre }}">
     </div>
-</div>
+    <h5 class="my-3">{{ $article->titre }}</h2>
+    {{-- <p class="mr-">{!! Str::words($article->contenu, 20) !!}</p> --}}
+    <small class="text-muted">{{ $article->created_at }}</small>
+</a>
+<p></p>
