@@ -15,8 +15,8 @@ class ArticleController extends Controller
      */
     public function index($id)
     {
-        $articles = Categorie::find($id)->articles;
-        return view('article_categorie', compact('articles', 'id'));
+        $categorie = Categorie::find($id);
+        return view('article_categorie', compact('categorie'));
     }
 
     /**

@@ -3,11 +3,11 @@
     <div class="row">
         {{-- liste des articles --}}
         <div class="col-md-8 py-5">
-            <h1 id="post">Articles</h1>
+            <h1 id="post">Categorie: {{ $categorie->titre }}</h1>
             <hr>
             <div class="row py-1">
-                @if ($articles->isNotEmpty())
-                    @foreach ($articles as $article)
+                @if ($categorie->articles->isNotEmpty())
+                    @foreach ($categorie->articles as $article)
                         <div class="col-md-6">
                             @include('parts.article')
                         </div>

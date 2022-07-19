@@ -19,7 +19,7 @@
                     conception des dashboards et la gestion des bases des données.
                 </p>
             </div>
-            <div class="col-md-3 offset-md-2">
+            <div class="col-md-5 offset-md-2">
                 <h2 id="contact" class="text-dark mb-5">
                     Me contacter <hr>
                 </h2>
@@ -49,7 +49,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row offset-9">
+        <div class="row offset-5 mb-5">
             <div class="main-footer d-flex p-2 px-3">
                 <span class="copyright ml-auto my-auto mr-2">Copyright © 2022, designed by
                     <a href="https://beckyada.com" rel="nofollow">Becky ada</a>

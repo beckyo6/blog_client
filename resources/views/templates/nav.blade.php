@@ -15,6 +15,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="https://portfolio.beckyada.com/">Portfolio</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/">Articles</a>
+                        </li>
                         @if (App\Models\Categorie::withArticle()->isNotEmpty())
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark" href="#" id="categories"
