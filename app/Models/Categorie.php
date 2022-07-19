@@ -26,9 +26,12 @@ class Categorie extends Model
 
     public function articles()
     {
-        return $this->hasMany(Article::class);
+        return $this->hasMany(Article::class, 'category_id');
     }
 
-    
-
+    public static function withArticle()
+    {
+        // TODO: filter and return only categorie with article
+        return self::all();
+    }
 }

@@ -20,9 +20,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 py-5">
-            <h1>5 derniers articles</h1>
-            <hr>
+        <div class="col-md-3 py-5 offset-md-1">
             @include('parts.aside')
         </div>
     @endsection

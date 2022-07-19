@@ -13,9 +13,9 @@
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Portfolio</a>
+                            <a class="nav-link text-dark" href="https://portfolio.beckyada.com/">Portfolio</a>
                         </li>
-                        @if (App\Models\Categorie::all()->isNotEmpty())
+                        @if (App\Models\Categorie::withArticle()->isNotEmpty())
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark" href="#" id="categories"
                                     data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
