@@ -13,7 +13,7 @@
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="https://portfolio.beckyada.com/">Portfolio</a>
+                            <a class="nav-link text-dark" href="https://beckyada.com/">Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="/">Articles</a>

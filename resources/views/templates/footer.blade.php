@@ -4,9 +4,10 @@
         <div class="row py-3">
             <div class="col-md-5">
                 <h2 id="about" class="text-dark mb-5">
-                    À propos de moi <hr>
+                    À propos de moi
+                    <hr>
                 </h2>
-                
+
                 <p>
                     je suis <b>Rebecca tshikadile</b>, souvent j'utilise mon pseudo <b>becky ada</b>.
                 </p>
@@ -21,7 +22,8 @@
             </div>
             <div class="col-md-5 offset-md-2">
                 <h2 id="contact" class="text-dark mb-5">
-                    Me contacter <hr>
+                    Me contacter
+                    <hr>
                 </h2>
                 {{-- list of social network logo --}}
                 <ul class="social">
